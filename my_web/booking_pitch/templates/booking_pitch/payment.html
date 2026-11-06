@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đặt Sân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #16a34a;
+            --primary-dark: #16a34a;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-color: #f3f4f6; /* Thêm màu nền cho body dễ nhìn hơn */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .booking-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(22, 163, 74, 0.15);
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            overflow: hidden;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        /* --- CỘT TRÁI --- */
+        .info-section {
+            flex: 1;
+            padding: 3rem;
+            background-color: #ffffff;
+            border-right: 2px dashed #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-section h2 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item { margin-bottom: 1.5rem; }
+        .info-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+        .info-value {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* --- CỘT PHẢI --- */
+        .payment-section {
+            flex: 1;
+            padding: 3rem;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .payment-section h2 {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .price-highlight {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .qr-box {
+            background: #fff;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .qr-box img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .transfer-note {
+            background-color: #fef2f2;
+            border: 1px solid #fca5a5;
+            color: #b91c1c;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .transfer-note strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            word-break: break-word;
+        }
+
+        /* --- CSS MỚI CHO ĐỒNG HỒ --- */
+        .timer-box {
+            background-color: #fffbeb; /* Vàng nhạt cảnh báo */
+            color: #b45309;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #fde68a;
+            display: inline-block;
+        }
+
+        .timer-box span {
+            font-family: monospace;
+            font-size: 1.4rem;
+            margin-left: 5px;
+        }
+
+        /* --- CSS TRẠNG THÁI HẾT HẠN --- */
+        #payment-expired {
+            display: none; /* Ẩn đi lúc đầu */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .expired-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+
+        .expired-msg {
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .expired-sub {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-back {
+            background-color: var(--text-muted);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            .booking-card { flex-direction: column; }
+            .info-section {
+                border-right: none;
+                border-bottom: 2px dashed #e5e7eb;
+                padding: 2rem;
+            }
+            .payment-section { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="booking-card">
+        <!-- CỘT TRÁI: THÔNG TIN -->
+        <div class="info-section">
+            <h2>Thông tin đặt sân</h2>
+            <div class="info-item">
+                <div class="info-label">Người đặt</div>
+                <div class="info-value">{{ booking.user.name }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Sân đặt</div>
+                <div class="info-value">{{ booking.timeslot.pitch }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Khung giờ</div>
+                <div class="info-value">{{ booking.timeslot.start_time|time:"H:i" }} - {{ booking.timeslot.end_time|time:"H:i" }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Ngày</div>
+                <div class="info-value">{{ booking.booking_date|date:"d/m/Y" }}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Cần thanh toán</div>
+                <div class="info-value" style="color: var(--primary-color);">{{ booking.timeslot.price }} VNĐ</div>
+            </div>
+        </div>
+
+        <!-- CỘT PHẢI: THANH TOÁN QR -->
+        <div class="payment-section">
+
+            <!-- TRẠNG THÁI 1: CÒN HẠN (Đang chờ thanh toán) -->
+            <div id="payment-active">
+                <h2>Quét mã thanh toán</h2>
+
+                <!-- Bảng đồng hồ đếm ngược -->
+                <div class="timer-box">
+                    Vui lòng thanh toán trong: <span id="countdown-timer">10:00</span>
+                </div>
+
+                {% if qr_url %}
+                    <div class="price-highlight">{{ booking.timeslot.price }} đ</div>
+                    <div class="qr-box">
+                        <img src="{{ qr_url }}" alt="Mã QR VietQR">
+                    </div>
+                    <div class="transfer-note">
+                        Nội dung chuyển khoản (Bắt buộc):<br>
+                        <strong>SEVQR {{booking.id}}</strong>
+                    </div>
+                {% else %}
+                    <div style="color: #dc2626; padding: 1rem;">Lỗi tải mã QR. Vui lòng thử lại sau!</div>
+                {% endif %}
+            </div>
+
+            <!-- TRẠNG THÁI 2: HẾT HẠN (Bị ẩn lúc đầu, JS sẽ mở lên khi đồng hồ về 0) -->
+            <div id="payment-expired">
+                <div class="expired-icon">⏱️</div>
+                <div class="expired-msg">Đơn Đặt Sân Đã Hết Hạn</div>
+                <div class="expired-sub">Thời gian giữ chỗ 10 phút đã kết thúc.<br>Vui lòng tạo lại đơn đặt sân mới.</div>
+                <a href="/" class="btn-back">Quay lại trang chủ</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CODE JAVASCRIPT ĐẾM NGƯỢC -->
+    <script>
+
+        let targetTime = parseInt("{{ expire_timestamp }}");
+
+        const timerElement = document.getElementById('countdown-timer');
+        const activeSection = document.getElementById('payment-active');
+        const expiredSection = document.getElementById('payment-expired');
+        const timerBox = document.querySelector('.timer-box');
+
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetTime - now;
+
+            // NẾU HẾT GIỜ (Khoảng cách <= 0)
+            if (distance <= 0) {
+                clearInterval(countdownInterval);
+
+                // Giấu phần thanh toán đi, hiện phần "Đã hết hạn" lên
+                activeSection.style.display = 'none';
+                expiredSection.style.display = 'flex';
+                return;
+            }
+
+            // Tính toán phút và giây
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Gắn số 0 đằng trước nếu nhỏ hơn 10 (vd: 09:05)
+            const displayMin = minutes < 10 ? "0" + minutes : minutes;
+            const displaySec = seconds < 10 ? "0" + seconds : seconds;
+
+            timerElement.innerHTML = displayMin + ":" + displaySec;
+
+            // Hiệu ứng cảnh báo: Còn dưới 2 phút thì chữ đồng hồ chuyển màu đỏ còi hụ
+            if (distance < 2 * 60 * 1000) {
+                timerBox.style.backgroundColor = '#fee2e2';
+                timerBox.style.borderColor = '#fca5a5';
+                timerBox.style.color = '#dc2626';
+            }
+
+        }, 1000);
+
+
+
+        const bookingId = "{{ booking.id }}";
+    if (bookingId) {
+        const paymentSocket = new WebSocket(`ws://${window.location.host}/ws/payment/${bookingId}/`);
+
+        paymentSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            if (data.status === 'success') {
+                alert("Thanh toán thành công, Cảm ơn bạn đã đặt sân của chúng tôi!");
+                window.location.href = "/";
+            }
+        };
+    } else {
+        console.error("Không tìm thấy bookingId!");
+    }
+    </script>
+</body>
+</html>

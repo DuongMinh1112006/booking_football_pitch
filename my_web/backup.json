@@ -1,0 +1,1308 @@
+[
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 1,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 2,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 3,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 4,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 5,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 6,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 7,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 8,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 9,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 10,
+    "fields": {
+        "pitch": "7/1",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 11,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 12,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 13,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 14,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 15,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 16,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 17,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 18,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 19,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 20,
+    "fields": {
+        "pitch": "7/2",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 21,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 22,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 23,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 24,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 25,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 26,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 27,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 28,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 29,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 30,
+    "fields": {
+        "pitch": "7/3",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 31,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 32,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 33,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 34,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 35,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 36,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 37,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 38,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 39,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 40,
+    "fields": {
+        "pitch": "7/4",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 41,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 42,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 43,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 44,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 45,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 46,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 47,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 48,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 49,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 50,
+    "fields": {
+        "pitch": "7/5",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 51,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 52,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 53,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 54,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 55,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 56,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 57,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 58,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 59,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 60,
+    "fields": {
+        "pitch": "7/6",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 61,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 62,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 63,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 64,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 65,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 66,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 67,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 68,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 69,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 70,
+    "fields": {
+        "pitch": "7/7",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 71,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 72,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 73,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 74,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 75,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "300000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 76,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "350000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 77,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "450000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 78,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "19:30:00",
+        "end_time": "21:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 79,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "21:00:00",
+        "end_time": "22:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 80,
+    "fields": {
+        "pitch": "7/8",
+        "start_time": "22:30:00",
+        "end_time": "00:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 81,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 82,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 83,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 84,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 85,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 86,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 87,
+    "fields": {
+        "pitch": "9/1",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "700000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 88,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 89,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 90,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 91,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 92,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 93,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 94,
+    "fields": {
+        "pitch": "9/2",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "700000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 95,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 96,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 97,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 98,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 99,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 100,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 101,
+    "fields": {
+        "pitch": "9/3",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "700000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 102,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 103,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 104,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 105,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "500000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 106,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 107,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "16:30:00",
+        "end_time": "18:00:00",
+        "price": "600000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 108,
+    "fields": {
+        "pitch": "9/4",
+        "start_time": "18:00:00",
+        "end_time": "19:30:00",
+        "price": "700000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 109,
+    "fields": {
+        "pitch": "11/1",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 110,
+    "fields": {
+        "pitch": "11/1",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 111,
+    "fields": {
+        "pitch": "11/1",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 112,
+    "fields": {
+        "pitch": "11/1",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 113,
+    "fields": {
+        "pitch": "11/1",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "1000000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 114,
+    "fields": {
+        "pitch": "11/2",
+        "start_time": "05:30:00",
+        "end_time": "07:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 115,
+    "fields": {
+        "pitch": "11/2",
+        "start_time": "07:00:00",
+        "end_time": "08:30:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 116,
+    "fields": {
+        "pitch": "11/2",
+        "start_time": "08:30:00",
+        "end_time": "10:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 117,
+    "fields": {
+        "pitch": "11/2",
+        "start_time": "13:30:00",
+        "end_time": "15:00:00",
+        "price": "900000"
+    }
+},
+{
+    "model": "booking_pitch.timeslots",
+    "pk": 118,
+    "fields": {
+        "pitch": "11/2",
+        "start_time": "15:00:00",
+        "end_time": "16:30:00",
+        "price": "1000000"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "11/1",
+    "fields": {
+        "type": "11",
+        "name": "1",
+        "pitch_parent": null
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "11/2",
+    "fields": {
+        "type": "11",
+        "name": "2",
+        "pitch_parent": null
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/1",
+    "fields": {
+        "type": "7",
+        "name": "1",
+        "pitch_parent": "9/1"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/2",
+    "fields": {
+        "type": "7",
+        "name": "2",
+        "pitch_parent": "9/1"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/3",
+    "fields": {
+        "type": "7",
+        "name": "3",
+        "pitch_parent": "9/2"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/4",
+    "fields": {
+        "type": "7",
+        "name": "4",
+        "pitch_parent": "9/2"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/5",
+    "fields": {
+        "type": "7",
+        "name": "5",
+        "pitch_parent": "9/3"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/6",
+    "fields": {
+        "type": "7",
+        "name": "6",
+        "pitch_parent": "9/3"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/7",
+    "fields": {
+        "type": "7",
+        "name": "7",
+        "pitch_parent": "9/4"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "7/8",
+    "fields": {
+        "type": "7",
+        "name": "8",
+        "pitch_parent": "9/4"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "9/1",
+    "fields": {
+        "type": "9",
+        "name": "1",
+        "pitch_parent": "11/1"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "9/2",
+    "fields": {
+        "type": "9",
+        "name": "2",
+        "pitch_parent": "11/1"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "9/3",
+    "fields": {
+        "type": "9",
+        "name": "3",
+        "pitch_parent": "11/2"
+    }
+},
+{
+    "model": "booking_pitch.pitches",
+    "pk": "9/4",
+    "fields": {
+        "type": "9",
+        "name": "4",
+        "pitch_parent": "11/2"
+    }
+}
+]

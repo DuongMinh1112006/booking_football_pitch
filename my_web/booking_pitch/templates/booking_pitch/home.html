@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đặt Sân</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        .time-slot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #1e293b;
+            font-size: 16px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .time-slot:hover {
+            border-color: #cbd5e1;
+            background-color: #f8fafc;
+        }
+
+        /* 2. Trạng thái đang chọn (Màu xanh lá) */
+        .time-slot.selected {
+            border-color: #28a745;
+            background-color: #f0fdf4;
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .time-slot.disabled {
+            background-color: #f8fafc;
+            border-color: transparent;
+            color: #cbd5e1;
+            text-decoration: line-through;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-[#f4f7f6] p-4 md:p-12 font-sans antialiased min-h-screen flex flex-col items-center">
+    {% csrf_token %}
+
+    <!-- Navbar -->
+    <div class="w-full max-w-4xl mx-auto mb-6 flex justify-between items-center px-2">
+        <a href="{% url 'home_page' %}" class="text-slate-600 hover:text-[#28a745] font-medium transition-colors">Home</a>
+
+        {% if user.is_authenticated %}
+            <div class="text-[#28a745] font-semibold text-lg">
+                Xin chào, {{ user.name|default:user.username }}!
+            </div>
+        {% endif %}
+
+        <div class="flex gap-6">
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="text-red-500 hover:text-red-700 font-medium">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="text-slate-600 hover:text-[#28a745] font-medium transition-colors">Login</a>
+                <a href="{% url 'sign_up' %}" class="text-slate-600 hover:text-[#28a745] font-medium transition-colors">Sign up</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="w-full max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-t-[5px] border-[#28a745]">
+
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-800 text-center">Chọn lịch đá</h2>
+
+        {% if error %}
+        <div class="mb-6 p-4 rounded-lg bg-red-50 text-red-600 font-medium text-center text-sm">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Filter Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <select id="pitchType" class="w-full bg-white border border-slate-300 text-slate-700 py-3.5 px-4 rounded-lg focus:outline-none focus:border-[#28a745] focus:ring-[3px] focus:ring-[#28a745]/20 transition-all cursor-pointer text-[15px]">
+                <option value="">Loại sân</option>
+                <option value="7">Sân 7 người</option>
+                <option value="9">Sân 9 người</option>
+                <option value="11">Sân 11 người</option>
+            </select>
+
+            <select id="pitchSelect" class="w-full bg-white border border-slate-300 text-slate-700 py-3.5 px-4 rounded-lg focus:outline-none focus:border-[#28a745] focus:ring-[3px] focus:ring-[#28a745]/20 transition-all cursor-pointer text-[15px] disabled:bg-slate-100 disabled:opacity-70 disabled:cursor-not-allowed" disabled>
+                <option value="">Số sân</option>
+            </select>
+
+            <input type="date" id="dateSelect" class="w-full bg-white border border-slate-300 text-slate-700 py-3.5 px-4 rounded-lg focus:outline-none focus:border-[#28a745] focus:ring-[3px] focus:ring-[#28a745]/20 transition-all cursor-pointer text-[15px]">
+        </div>
+
+        <div class="w-full h-px bg-slate-100 mb-8"></div>
+
+        <!-- Timeslot Container -->
+        <div id="timeslotContainer" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 min-h-[120px] content-start">
+            <div class="col-span-full text-center text-slate-400 py-8 text-sm">
+                Vui lòng chọn sân và ngày
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pitchType = document.getElementById('pitchType');
+        const pitchSelect = document.getElementById('pitchSelect');
+        const dateSelect = document.getElementById('dateSelect');
+        const container = document.getElementById('timeslotContainer');
+
+        const configSoSan = { '7': 8, '9': 4, '11': 2 };
+
+        pitchType.addEventListener('change', function() {
+            const loaiSan = this.value;
+            pitchSelect.innerHTML = '<option value="">Số sân</option>';
+            container.innerHTML = '<div class="col-span-full text-center text-slate-400 py-8 text-sm">Vui lòng chọn sân và ngày</div>';
+
+            if (loaiSan) {
+                pitchSelect.disabled = false;
+                const soLuong = configSoSan[loaiSan];
+                for (let i = 1; i <= soLuong; i++) {
+                    const opt = document.createElement('option');
+                    opt.value = `${loaiSan}/${i}`;
+                    opt.text = `Sân số ${i}`;
+                    pitchSelect.appendChild(opt);
+                }
+            } else {
+                pitchSelect.disabled = true;
+            }
+        });
+
+        pitchSelect.addEventListener('change', checkAndFetch);
+        dateSelect.addEventListener('change', checkAndFetch);
+
+        function checkAndFetch() {
+            const pitchId = pitchSelect.value;
+            const dateVal = dateSelect.value;
+
+
+            if (pitchId && dateVal) {
+                container.innerHTML = '<div class="col-span-full text-center text-slate-400 py-8 text-sm">Đang kiểm tra lịch...</div>';
+
+                const safePitchId = encodeURIComponent(pitchId);
+
+                fetch(`{% url 'get_timeslot' %}?pitch_id=${safePitchId}&date=${dateVal}`)
+                .then(response => response.json())
+                .then(data => {
+                    container.innerHTML = '';
+
+                    if (!data.timeslots || data.timeslots.length === 0) {
+                        container.innerHTML = '<div class="col-span-full text-center text-slate-400 py-8 text-sm">Không có lịch cho ngày này</div>';
+                        return;
+                    }
+
+                    data.timeslots.forEach(slot => {
+                        const btn = document.createElement('button');
+                        btn.innerText = slot.start_time;
+
+                        if (slot.status === 'Locked') {
+                            btn.className = "py-3.5 rounded-xl border border-slate-100 bg-slate-50 text-slate-300 font-medium cursor-not-allowed line-through decoration-slate-300";
+                            btn.disabled = true;
+                        } else {
+                            btn.className = "py-3.5 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200 cursor-pointer";
+
+                            btn.onclick = () => {
+                                document.querySelectorAll('#timeslotContainer button').forEach(b => {
+                                    if(!b.disabled) {
+                                        b.className = "py-3.5 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200 cursor-pointer";
+                                    }
+                                });
+
+                                btn.className = "py-3.5 rounded-xl border border-emerald-500 bg-emerald-500 text-white font-semibold shadow-md shadow-emerald-500/20 transition-all duration-200";
+
+                                bookTimeslot(slot.id, dateVal);
+                            };
+                        }
+
+                        container.appendChild(btn);
+                    });
+                })
+                .catch(error => {
+                    container.innerHTML = '<div class="col-span-full text-center text-red-400 py-8 text-sm">Lỗi kết nối máy chủ</div>';
+                });
+            } else {
+                container.innerHTML = '<div class="col-span-full text-center text-slate-400 py-8 text-sm">Vui lòng chọn sân và ngày</div>';
+            }
+        }
+
+        // Hàm thực hiện chốt đơn gửi xuống Backend
+        function bookTimeslot(timeslotId, bookingDate) {
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+            const payload = {
+                timeslot_id: timeslotId,
+                booking_date: bookingDate
+            };
+
+            fetch("{% url 'booking' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrfToken
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.href = data.redirect_url;
+                    alert("Đặt sân thành công! Vui lòng thanh toán để xác nhận");
+                } else {
+                    alert("Lỗi!!: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi giao liên:", error);
+            });
+        }
+    </script>
+</body>
+</html>

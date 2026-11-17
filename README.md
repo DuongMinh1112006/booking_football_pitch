@@ -60,6 +60,41 @@ Hệ thống quản lý và đặt sân bóng đá trực tuyến theo thời gi
 <br>
 
 ---
-## Hướng dẫn cài đặt hệ thống
+## Hướng dẫn cài đặt hệ thống trên Local (qua Docker)
 
+*(Có thể trải nghiệm trực tiếp hệ thống tại **(http://103.165.145.102)** hoặc khởi chạy nhanh trên máy cá nhân qua Docker)*
 
+1. **Clone repository**
+   ```bash
+   git clone [https://github.com/DuongMinh1112006/booking_football_pitch.git](https://github.com/DuongMinh1112006/booking_football_pitch)
+   cd booking_football_pitch
+   cd my_web
+2. Tạo file cấu hình `.env`
+   ```bash
+   Tạo file cấu hình .env tương tự như sau
+
+   CLIENT_ID=?                      # client_id trong VIETQR
+   API_KEY=?                        # apit_key trong VIETQR
+
+   POSTGRES_USER=?                  # tên tài khoản postgres của bạn
+   POSTGRES_PASSWORD=?              # tài mật khẩu tài khoản
+   POSTGRES_DB=?                    # tên project chứa dữ liệu 
+
+   accountNo=?                      # số tài khoản nhận tiền 
+   accountName=?                    # tên tài khoản nhận tiền
+
+   DB_NAME=?                        # giống POSTGRES_DB
+   DB_USER=?                        # giống  POSTGRES_USER
+   DB_PASSWORD=?                    # giống POSTGRES_PASSWORD 
+   DB_HOST=db
+
+   EMAIL_HOST_USER=?                # tên gmail của bạn
+   EMAIL_HOST_PASSWORD=?            # app passwords của bạn lấy trong Google Account > App Passwords
+
+3. Chạy hệ thống bằng Docker compose
+   ```bash
+   docker compose up -d --build
+   docker compose exec web python manage.py migrate
+   docker compose exec web python manage.py loaddata data.json
+
+4. Truy cập ứng dụng tại [localhost://8080](http://localhost:8080)

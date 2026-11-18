@@ -4,6 +4,9 @@ Hệ thống quản lý và đặt sân bóng đá trực tuyến theo thời gi
 
 **Demo:** [http://103.165.145.102](http://103.165.145.102)
 
+Tài khoản demo: 
+- Tên đăng nhập: demouser
+- Mật khẩu: 12345678
 ---
 
 ## Tính năng chính

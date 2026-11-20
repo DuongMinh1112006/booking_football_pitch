@@ -28,5 +28,5 @@ jobs:
           DEBUG: "True"
           SECRET_KEY: "ci-test-key"
         run: |
-          python manage.py check
-          python manage.py test
+          python my_web/manage.py check
+          python my_web/manage.py test

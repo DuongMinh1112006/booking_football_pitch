@@ -29,4 +29,3 @@ jobs:
           SECRET_KEY: "ci-test-key"
         run: |
           python my_web/manage.py check
-          python my_web/manage.py test

@@ -2,6 +2,8 @@ from celery import shared_task
 from .models import Bookings, TimeSlots
 from django.core.mail import send_mail
 from django.conf import settings
+from datetime import datetime
+from django.utils import timezone
 
 @shared_task
 def check_and_cancel_booking(booking_id):
@@ -49,3 +51,9 @@ def send_otp_email_task(email, otp):
 
     send_mail(subject, message, email_from, recipient_list)
     return f"Đã gửi OTP đến {email}"
+
+
+@shared_task
+def delete_expired_slots():
+    today = timezone.localdate()
+    Bookings.objects.filter(booking_date=today).delete()

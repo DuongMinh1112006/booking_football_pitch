@@ -174,3 +174,12 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'daily-cleanup-orders': {
+        'task': 'booking_pitch.tasks.delete_expired_slots',
+        'schedule': crontab(hour=23, minute=59),  # Chạy lúc 23:59 mỗi đêm
+    },
+}

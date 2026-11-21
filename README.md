@@ -2,7 +2,7 @@
 
 Hệ thống quản lý và đặt sân bóng đá trực tuyến theo thời gian thực, hỗ trợ thanh toán tự động qua mã QR và đóng gói triển khai đa dịch vụ trên Linux VPS.
 
-**Demo:** [http://103.165.145.102](http://103.165.145.102)
+**Demo:** https://mybookingapp.duckdns.org/
 
 Tài khoản demo: 
 - Tên đăng nhập: demouser
@@ -65,7 +65,7 @@ Tài khoản demo:
 ---
 ## Hướng dẫn cài đặt hệ thống trên Local (qua Docker)
 
-*(Có thể trải nghiệm trực tiếp hệ thống tại **(http://103.165.145.102)** hoặc khởi chạy nhanh trên máy cá nhân qua Docker)*
+*(Có thể trải nghiệm trực tiếp hệ thống tại **(https://mybookingapp.duckdns.org/)** hoặc khởi chạy nhanh trên máy cá nhân qua Docker)*
 
 1. **Clone repository**
    ```bash

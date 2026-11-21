@@ -146,6 +146,7 @@ REDIS_URL = os.environ.get("REDIS_URL", f"redis://{REDIS_HOST}:6379/1")
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", f"redis://{REDIS_HOST}:6379/2")
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

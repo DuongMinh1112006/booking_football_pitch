@@ -29,12 +29,13 @@ def check_and_cancel_booking(booking_id):
                 for con_cua_san_con in ds_con_cua_san_con:
                     ds_cac_san.append(con_cua_san_con)
 
-    Bookings.objects.filter(
-        timeslot__pitch__in = ds_cac_san,
-        booking_date = booking.booking_date,
-        timeslot__start_time = booking.timeslot.start_time,
-        status = "LOCKED"
-    ).update(status = "CANCELLED")
+    if booking.status != "PAID":
+        Bookings.objects.filter(
+            timeslot__pitch__in = ds_cac_san,
+            booking_date = booking.booking_date,
+            timeslot__start_time = booking.timeslot.start_time,
+            status = "LOCKED"
+        ).update(status = "CANCELLED")
 
     if booking.status == 'PENDING':
         booking.status = 'CANCELLED'

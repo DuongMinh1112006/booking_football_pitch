@@ -315,7 +315,8 @@
 
         const bookingId = "{{ booking.id }}";
     if (bookingId) {
-        const paymentSocket = new WebSocket(`ws://${window.location.host}/ws/payment/${bookingId}/`);
+        const wsProtocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
+        const paymentSocket = new WebSocket(`${wsProtocol}${window.location.host}/ws/payment/${bookingId}/`);
 
         paymentSocket.onmessage = function(e) {
             const data = JSON.parse(e.data);

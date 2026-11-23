@@ -109,7 +109,7 @@ def create_booking(request):
             # booking_id = booking.id
             # redis_client.setex(f"booking_expired:{booking_id}", 600, "PENDING")
 
-            check_and_cancel_booking.apply_async(args=[booking.id], countdown=40)
+            check_and_cancel_booking.apply_async(args=[booking.id], countdown=600)
 
             # Tạo URL thanh toán chứa ID của booking vừa tạo
             # reverse() sẽ tìm URL có name='payment' và nhét booking_moi.id vào <int:booking_id>

@@ -2,7 +2,7 @@
 
 Hệ thống quản lý và đặt sân bóng đá trực tuyến theo thời gian thực, hỗ trợ thanh toán tự động qua mã QR và đóng gói triển khai đa dịch vụ trên Linux VPS.
 
-**Demo:** [http://103.165.145.102](http://103.165.145.102)
+**Demo:** https://mybookingapp.duckdns.org/
 
 Tài khoản demo: 
 - Tên đăng nhập: demouser
